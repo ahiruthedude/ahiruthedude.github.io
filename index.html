@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Steam Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Calculator</h1>
+    <div class="dropdown">
+        <select id="pageSelect">
+            <option value="calculator">Simple Math Calculator</option>
+            <option value="gasPressure">Gas Pressure Calculator</option>
+        </select>
+    </div>
+    <div id="calculatorContainer">
+        <div class="calculator">
+            <div class="display">0</div>
+            <div class="row">
+                <div class="button"><button class="clear">Clear</button></div>
+                <div class="button"><button class="sign">±</button></div>
+                <div class="button"><button>/</button></div>
+            </div>
+            <div class="row">
+                <div class="button"><button>7</button></div>
+                <div class="button"><button>8</button></div>
+                <div class="button"><button>9</button></div>
+                <div class="button"><button>*</button></div>
+            </div>
+            <div class="row">
+                <div class="button"><button>4</button></div>
+                <div class="button"><button>5</button></div>
+                <div class="button"><button>6</button></div>
+                <div class="button"><button>-</button></div>
+            </div>
+            <div class="row">
+                <div class="button"><button>1</button></div>
+                <div class="button"><button>2</button></div>
+                <div class="button"><button>3</button></div>
+                <div class="button"><button>+</button></div>
+            </div>
+            <div class="row">
+                <div class="button zero"><button>0</button></div>
+                <div class="button"><button>.</button></div>
+                <div class="button equal"><button>=</button></div>
+            </div>
+        </div>
+    </div>
+    <div id="gasPressure" style="display: none;">
+        <h2>Gas Pressure Calculator</h2>
+        <form id="gasPressureForm">
+            <div class="input-group">
+                <label for="volumeInput">Volume (V):</label>
+                <input type="number" id="volumeInput" step="0.01" required>
+                <span class="unit">L</span>
+            </div>
+            <div class="input-group">
+                <label for="molesInput">Moles (n):</label>
+                <input type="number" id="molesInput" step="0.01" required>
+                <span class="unit">m</span>
+            </div>
+            <div class="input-group">
+                <label for="temperatureInput">Temperature (T):</label>
+                <input type="number" id="temperatureInput" step="0.01" required>
+                <span class="unit">K</span>
+            </div>
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="pressureResult"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
